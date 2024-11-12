@@ -11,7 +11,7 @@ WORKDIR /app
 # Copy the entire project into the container
 COPY . .
 
-# Use Maven to build the project and create the jar file
+# Use Maven to build the project and create the jar file testing
 RUN mvn clean package -DskipTests
 
 # Use a slim JDK image for the runtime stage
