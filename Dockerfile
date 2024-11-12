@@ -21,7 +21,7 @@ FROM openjdk:17-jdk-slim
 EXPOSE 8081
 
 # Copy the jar file from the build stage to the runtime stage
-COPY --from=build /app/target/SpringAPIDemo1-0.0.1-SNAPSHOT.jar api1.jar
+COPY --from=build /app/target/SpringAPIDemo1-0.0.1.jar api1.jar
 
 # Set the entrypoint to run the jar file
 ENTRYPOINT ["java", "-jar", "api1.jar"]
